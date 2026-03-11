@@ -141,7 +141,7 @@ body {
 .nextra-navbar-blur {
   background: var(--agentkit-navbar-bg) !important;
   border-color: transparent !important;
-  border-bottom: none !important;
+  border-bottom: 1px solid var(--agentkit-border-soft) !important;
   box-shadow: none !important;
   backdrop-filter: saturate(180%) blur(18px);
 }
@@ -154,11 +154,21 @@ body {
 
 .nextra-navbar nav {
   gap: 1rem !important;
+  max-width: none !important;
+  margin-inline: 0 !important;
+  padding-inline: 1.25rem !important;
 }
 
 /* Theme switch in navbar */
 .navbar-theme-switch {
   margin-left: 0.25rem;
+}
+
+/* ── Full-width layout: sidebar flush left ────────── */
+
+body > div:has(> .nextra-sidebar) {
+  max-width: none !important;
+  margin-inline: 0 !important;
 }
 
 /* ── Sidebar ──────────────────────────────────────── */
@@ -193,10 +203,16 @@ body {
 }
 
 .nextra-sidebar li.active > a,
-.nextra-sidebar li.active > button,
 .nextra-sidebar a[aria-current="page"] {
   background: var(--agentkit-sidebar-active-bg) !important;
   color: var(--agentkit-sidebar-active-text) !important;
+  box-shadow: none !important;
+  font-weight: 600;
+}
+
+.nextra-sidebar li.active > button {
+  background: transparent !important;
+  color: var(--agentkit-text) !important;
   box-shadow: none !important;
   font-weight: 600;
 }
@@ -220,6 +236,8 @@ body {
   border-bottom: 1px solid var(--agentkit-border) !important;
   margin-inline: 0 !important;
   padding-inline: 0.8rem !important;
+  padding-block: 0.25rem !important;
+  min-height: auto !important;
   flex-wrap: nowrap !important;
   justify-content: flex-end !important;
 }
@@ -400,6 +418,9 @@ article > div:has(> time) {
 
 .site-footer {
   font-size: 0.9rem;
+  max-width: 88rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
 }
 
 .footer-copy {
@@ -936,18 +957,19 @@ article a:hover {
 /* ── Pagination nav ──────────────────────────── */
 
 article > div:has(> a[title][href]) {
-  margin-top: 2.75rem;
-  padding-top: 1.25rem !important;
-  border-top: 1px solid var(--agentkit-border) !important;
+  margin-top: 2rem;
+  padding-top: 0 !important;
+  border-top: none !important;
   gap: 0.8rem;
 }
 
 article > div:has(> a[title][href]) a {
-  padding: 0.9rem 1rem;
+  padding: 0.5rem 0.75rem;
   border: 1px solid var(--agentkit-border);
   border-radius: var(--agentkit-radius);
   background: var(--agentkit-surface);
   color: var(--agentkit-text-muted) !important;
+  font-size: 0.875rem !important;
 }
 
 article > div:has(> a[title][href]) a:hover {
