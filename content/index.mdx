@@ -1,57 +1,67 @@
 ---
 title: agentkit
-description: 바이브 코딩을 넘어 에이전틱 코딩으로 — AI가 일하게 만드는 법
+description: 만든다 → 반복을 발견한다 → 반복을 자산으로 만든다
+theme:
+  layout: full
+  sidebar: false
+  toc: false
+  pagination: false
+  copyPage: false
+  timestamp: false
 ---
 
-import { Cards, Callout } from 'nextra/components'
+<div className="home-page">
+  <section className="home-hero">
+    <span className="home-kicker">빗썸 IT 심화 2회차 워크숍</span>
+    <h1 className="home-title">AI와 일하는 나만의 원칙 만들기</h1>
+    <span className="home-subtitle">
+      같은 앱을 세 가지 도구로 만들면서 "AI에게 반복하는 말"을 발견하고,
+      그 반복을 AGENTS.md라는 자산으로 만드는 실습 가이드입니다.
+    </span>
+    <div className="home-actions">
+      <a className="home-button primary" href="/workshop">실습 시작하기</a>
+    </div>
+  </section>
 
-# agentkit
+  <section className="home-divider-section">
+    <div className="home-divider-card">
+      <span className="home-divider-label">양을 늘린다</span>
+      <span className="home-divider-text">같은 앱을 세 도구로 만들며 AI 활용 경험을 쌓는다</span>
+    </div>
+    <div className="home-divider-arrow">→</div>
+    <div className="home-divider-card">
+      <span className="home-divider-label">반복을 발견한다</span>
+      <span className="home-divider-text">AI에게 반복해서 요청한 말을 찾아낸다</span>
+    </div>
+    <div className="home-divider-arrow">→</div>
+    <div className="home-divider-card active">
+      <span className="home-divider-label">자산으로 만든다</span>
+      <span className="home-divider-text">반복을 AGENTS.md에 담아 한 번 설명으로 매번 적용한다</span>
+    </div>
+  </section>
 
-> "AI에게 물어보는 것"에서 "AI가 일하게 만드는 것"으로.
-
-agentkit은 **에이전틱 코딩 실습 가이드**입니다.
-프롬프트 하나로 앱을 만드는 것에서 시작해, AI 에이전트를 오케스트레이션하는 엔지니어의 관점을 직접 경험합니다.
-
-<Callout type="info">
-**바이브 코딩 vs 에이전틱 코딩**
-
-바이브 코딩은 AI에게 자연어로 말해 코드를 얻는 방법입니다.
-에이전틱 코딩은 AI가 스스로 계획하고, 도구를 쓰고, 결과를 검증하도록 **설계**하는 것입니다.
-
-이 워크숍에서는 두 방식의 차이를 직접 체감합니다.
-</Callout>
-
-## 이 가이드에서 배우는 것
-
-- **도구 선택**: Gemini Canvas → Google AI Studio → Lovable — 같은 목표, 다른 도구의 차이를 몸으로 배운다
-- **에이전틱 고도화**: 바이브 코딩으로 시작한 앱에 인증 · DB · AI를 붙여 실제로 동작하게 만든다
-- **전문성 자산화**: 내 프롬프트와 판단을 AI가 재현 가능한 자산으로 만드는 법
-
-## 워크숍 구성
-
-<Cards>
-  <Cards.Card
-    title="세션 1 — 프롬프트 증강기 만들기"
-    description="Gemini Canvas → Google AI Studio → Lovable로 같은 앱을 세 번 만들며 도구의 차이를 체감한다"
-    href="/workshop/session-1"
-  />
-  <Cards.Card
-    title="세션 2 — 에이전틱 고도화"
-    description="바이브 코딩을 넘어 — Google 인증 · 데이터베이스 · AI API 연동을 단계별 미션으로"
-    href="/workshop/session-2"
-  />
-  <Cards.Card
-    title="세션 3 — 전문성 자산화"
-    description="내 판단을 AI가 재현하게 만들기 — 팀의 프롬프트를 공유하고 함께 발전시킨다"
-    href="/workshop/session-3"
-  />
-</Cards>
-
-## 핵심 메시지
-
-```
-기본반: AI에게 물어보는 법 (바이브 코딩 입문)
-심화반: AI가 일하게 만드는 법 (에이전틱 코딩)
-```
-
-> "AI가 내 판단을 실행하게 하려면, 내 판단을 언어로 만들어야 한다"
+  <section className="home-roadmap">
+    <span className="section-kicker">Workshop Roadmap</span>
+    <h2 className="home-section-title">세 단계로 진행합니다</h2>
+    <div className="home-steps">
+      <a className="home-step" href="/workshop/session-1">
+        <span className="home-step-number">01</span>
+        <h3>만든다 — 양을 늘린다</h3>
+        <span className="home-step-desc">프롬프트 증강기를 Gemini Canvas와 Google AI Studio로 만들며 AI 활용 경험을 쌓습니다.</span>
+        <span className="home-step-tag">세션 1</span>
+      </a>
+      <a className="home-step" href="/workshop/session-2">
+        <span className="home-step-number">02</span>
+        <h3>만든다 + 반복을 발견한다</h3>
+        <span className="home-step-desc">Lovable로 완성도를 높이고, 세 도구에서 반복했던 말을 찾아냅니다.</span>
+        <span className="home-step-tag">세션 2</span>
+      </a>
+      <a className="home-step" href="/workshop/session-3">
+        <span className="home-step-number">03</span>
+        <h3>자산으로 만든다</h3>
+        <span className="home-step-desc">반복을 AGENTS.md로 정리하고, Before/After로 차이를 직접 확인합니다.</span>
+        <span className="home-step-tag">세션 3</span>
+      </a>
+    </div>
+  </section>
+</div>

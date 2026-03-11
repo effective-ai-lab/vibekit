@@ -1,4 +1,7 @@
 export default {
-  index: '소개',
+  index: {
+    title: '소개',
+    display: 'hidden'
+  },
   workshop: '워크숍'
 }

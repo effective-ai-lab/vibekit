@@ -1,0 +1,137 @@
+---
+title: Gemini Canvas로 증강기 만들기
+description: Canvas 탐색, 딸깍 체험, 프롬프트 증강기 만들기
+---
+
+import { Steps, Callout } from 'nextra/components'
+
+# 1-1. Gemini Canvas로 증강기 만들기
+
+## Gemini Canvas란?
+
+[Gemini Canvas](https://gemini.google/overview/canvas/)는 Google Gemini에 내장된 **대화형 앱 빌더**입니다.
+프롬프트로 아이디어를 설명하면, Gemini가 코드를 생성해서 바로 실행 가능한 앱·게임·슬라이드·인포그래픽 등을 만들어줍니다.
+
+**핵심 특징:**
+- **코딩 불필요** — 자연어 설명만으로 완전한 앱을 생성
+- **실시간 미리보기** — 생성된 앱을 바로 실행하고 테스트
+- **대화로 수정** — 채팅으로 기능 추가·디자인 변경 요청
+- **공유 링크** — 만든 앱을 링크로 다른 사람에게 공유
+
+<Callout type="info">
+**공식 문서:** [Gemini Canvas 도움말](https://support.google.com/gemini/answer/16047321) · [Canvas 소개 페이지](https://gemini.google/overview/canvas/)
+</Callout>
+
+---
+
+## 1-1. Gemini Canvas 탐색 — 앱 / 게임 / 슬라이드 만들어보기
+
+Canvas가 어떤 것들을 만들 수 있는지 빠르게 체험합니다. 아래 세 가지를 각각 만들어보세요.
+
+| 카테고리 | 예시 프롬프트 |
+|---------|------------|
+| 앱 | "포모도로 타이머 앱 만들어줘. 25분 집중 / 5분 휴식 사이클로" |
+| 게임 | "간단한 숫자 맞추기 게임 만들어줘. 1~100 사이 숫자를 맞추는 게임" |
+| 슬라이드 | "프롬프트 엔지니어링 5가지 팁을 슬라이드로 만들어줘" |
+
+만들어진 앱 링크를 시트에 공유해주세요.
+[crew-apps](https://crew-apps.vercel.app/)에서 다른 사람들이 만든 사례도 참고해보세요.
+
+<Callout type="info">
+**Google이 보여주는 Canvas 활용 사례 — 정적 이미지를 인터랙티브로 만들기**
+
+Gemini 3에서는 정적 이미지를 넣으면 보드게임, 냅킨 스케치를 웹사이트로, 다이어그램을 인터랙티브 수업으로 변환할 수 있습니다.
+이미지의 내용을 깊이 이해하고, 가장 효과적인 인터랙티브 형태로 자동 변환해줍니다.
+
+<video src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/Bring_anything_to_life.mp4#t=0.001" controls muted playsInline style={{ width: '100%', borderRadius: '8px', marginTop: '0.75rem' }} />
+
+출처: [Gemini 3 examples & demos — Google Blog](https://blog.google/products-and-platforms/products/gemini/gemini-3-examples-demos/)
+</Callout>
+
+---
+
+## 1-2. 딸깍(dalgak.com) 체험하기
+
+<Steps>
+### 접속하기
+
+[dalgak.com](https://dalgak.com)에 접속합니다.
+
+### 프롬프트 입력하기
+
+평소 업무에서 AI에게 시킬 법한 요청을 하나 입력해보세요.
+
+### 개선 과정 확인하기
+
+질문에 답하면서 프롬프트가 어떻게 개선되는지 확인합니다.
+
+### 결과 복사하기
+
+완성된 프롬프트를 복사해두세요 — 나중에 참고용으로 씁니다.
+</Steps>
+
+<Callout>
+이런 도구를 Gemini Canvas에서 직접 만들어볼 수 있습니다.
+</Callout>
+
+---
+
+## 1-3. Gemini Canvas로 프롬프트 증강기 만들기
+
+<Steps>
+### Gemini 접속하기
+
+[gemini.google.com](https://gemini.google.com)에 접속합니다.
+
+### 프롬프트 증강기 만들기
+
+딸깍(dalgak.com)처럼 **내가 입력한 프롬프트를 개선해주는 앱**을 만들어보세요.
+
+**방법은 자유입니다. 아래 중 편한 걸 선택하세요:**
+
+- **A. 클론 코딩**: 딸깍의 핵심 기능을 설명해서 비슷한 앱을 만들기
+  - 예: "사용자가 간단한 프롬프트를 입력하면, AI가 프롬프트를 구체화할만한 옵션을 제안해주고, 사용자가 딸깍 클릭만 하면 더 구체적인 프롬프트로 개선해주는 앱을 Canvas로 만들어줘"
+- **B. 예시 프롬프트 사용**: 아래 프롬프트를 그대로 복사해서 입력
+- **C. 직접 설계**: 본인이 원하는 방식으로 프롬프트를 처음부터 작성
+
+**예시 프롬프트 (B 선택 시):**
+
+```
+프롬프트 증강기를 Canvas 앱으로 만들어줘.
+
+기능:
+- 텍스트 입력창에 사용자가 프롬프트를 입력
+- "증강하기" 버튼을 누르면 AI가 더 구체적이고 효과적인 프롬프트로 개선
+- 개선된 프롬프트를 결과 영역에 표시
+- "복사" 버튼으로 클립보드에 복사
+
+UI:
+- 깔끔한 단일 페이지
+- 입력과 출력이 좌우 또는 상하로 나란히 보이게
+```
+
+### 직접 써보기
+
+Canvas에서 앱이 생성되면 직접 사용해보세요.
+
+### 수정 요청하기
+
+**최소 1가지는 본인이 직접 수정 요청**해보세요 — 이 수정이 나중에 AGENTS.md의 재료가 됩니다.
+
+<Callout type="warning">
+**수정 요청 예시:**
+- "결과를 짧은 버전 / 상세 버전 두 가지로 보여줘"
+- "입력 예시를 placeholder로 넣어줘"
+- "다크 모드로 바꿔줘"
+</Callout>
+
+### 공유하기
+
+완성되면 공유 링크를 만들어 시트에 붙여넣어주세요.
+</Steps>
+
+---
+
+## 다음 단계
+
+→ [Step 2: Google AI Studio Build로 증강기 만들기](/workshop/session-1/ai-studio)
