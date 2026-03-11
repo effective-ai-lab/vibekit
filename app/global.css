@@ -438,8 +438,14 @@ article > div:has(> time) {
 /* ── Article Typography ───────────────────────────── */
 
 article {
-  max-width: 44rem;
-  margin-inline: auto;
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* TOC와 article을 함께 가운데 정렬 */
+nav[aria-label="table of contents"] {
+  margin-right: auto;
 }
 
 /* Remove the top border line above breadcrumb */
